@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "mentalh",
-    "slug": "mentalh",
+    "name": "nav-demo",
+    "slug": "nav-demo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "myapp",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
