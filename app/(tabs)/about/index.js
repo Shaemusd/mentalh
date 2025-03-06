@@ -19,7 +19,7 @@ export default function HomePage() {
           source={require('../mood/assets/angry.png')} 
           style={styles.image} 
         />
-        <Link href="/anger" style={styles.link}>
+        <Link href="/about/anger_info" style={styles.link}>
           Go to Anger
         </Link>
       </View>
@@ -33,7 +33,7 @@ export default function HomePage() {
           source={require('../mood/assets/sad.png')} 
           style={styles.image} 
         />
-        <Link href="/sad" style={styles.link}>
+        <Link href="/about/sad_info" style={styles.link}>
           Go to Sad
         </Link>
       </View>
@@ -47,7 +47,7 @@ export default function HomePage() {
           source={require('../mood/assets/happy.png')} 
           style={styles.image} 
         />
-        <Link href="/therapy" style={styles.link}>
+        <Link href="/about/therapy_info" style={styles.link}>
           Go to Therapy
         </Link>
       </View>
@@ -61,7 +61,7 @@ export default function HomePage() {
           source={require('../mood/assets/very_sad.png')} 
           style={styles.image} 
         />
-        <Link href="/prevent" style={styles.link}>
+        <Link href="/about/prevent" style={styles.link}>
           Go to Prevent
         </Link>
       </View>

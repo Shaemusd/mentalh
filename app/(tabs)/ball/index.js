@@ -4,6 +4,7 @@ import { View, StyleSheet, AppState, Dimensions } from 'react-native';
 import { GameEngine } from 'react-native-game-engine';
 import Matter from 'matter-js';
 import { PhysicsContext } from './context/_PhysicsContext.js'; // Import from your actual path
+import { Link } from 'expo-router';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 
@@ -68,7 +69,7 @@ export default function BallScreen() {
 
 
     // 4) Create floor, walls, etc.
-    const floorHeight = 50;
+    const floorHeight = 110;
     const floorY = SCREEN_HEIGHT - 80 - (floorHeight / 2) - 20;
     const floor = Matter.Bodies.rectangle(
         SCREEN_WIDTH / 2,
@@ -150,8 +151,16 @@ export default function BallScreen() {
                     entities={entities}
                     running={running}
                 />
+                
             </View>
+            
+                    <View style={styles.container_physics}>
+                    <Link href="/ball/physics" style={styles.button}>
+                      Change How It Moves!
+                    </Link>
+                    </View>
         </View>
+        
     );
 }
 
@@ -243,6 +252,27 @@ function TouchSystem(entities, { touches }, offsetY) {
 const styles = StyleSheet.create({
     container: { flex: 1 },
     gameContainer: { flex: 1, backgroundColor: '#FFAB91' },
-});
 
+ 
 
+    button: {
+
+        fontSize: 20,
+        textDecorationLine: '#FF7043',
+        color: 'black',
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#F5F5DC',
+        borderRadius: 5,
+        marginBottom: 15,
+        // backgroundColor: 'trans',
+        textDecorationLine: 'underline',
+      },
+      container_physics: {
+        
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        color:     '#F5F5DC',
+      },
+
+ });

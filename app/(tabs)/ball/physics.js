@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import Slider from '@react-native-community/slider';
 import { PhysicsContext } from './context/_PhysicsContext';
+import { Link } from 'expo-router';
 
 export default function PhysicsScreen() {
     const {
@@ -81,5 +82,5 @@ const styles = StyleSheet.create({
     },
     slider: {
         width: 250, height: 40, alignSelf: 'center'
-    }
+    },
 });
