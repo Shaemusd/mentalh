@@ -9,7 +9,7 @@ export default function Index() {
         Your personal companion for daily mood improvement
       </Text>
       {/* Optional: Display an image if you have one */}
-      <Image source={require('../mood/assets/angry.png')} style={styles.image} />
+      <Image source={require('../mood/assets/excited.png')} style={styles.image} />
       <Link href="/home/details" style={styles.button}>
         Go to Details screen
       </Link>
@@ -23,7 +23,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#FFAB91',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: '#fff',
+    color: 'Black',
     marginBottom: 10,
     textAlign: 'center',
   },
   subtitle: {
     fontSize: 18,
-    color: '#ccc',
+    color: 'black',
     marginBottom: 30,
     textAlign: 'center',
   },
@@ -49,10 +49,10 @@ const styles = StyleSheet.create({
   button: {
     fontSize: 20,
     textDecorationLine: 'underline',
-    color: '#fff',
+    color: 'black',
     padding: 10,
     borderWidth: 1,
-    borderColor: '#fff',
+    borderColor: 'black',
     borderRadius: 5,
     marginBottom: 15,
   },

@@ -23,7 +23,7 @@ export default function PhysicsScreen() {
         setBounciness(localBounciness);
 
         // Increment physicsVersion to trigger a re-spawn in BallScreen
-        commitPhysicsChanges();
+        commitPhysicsChangess(); //added second s b.c i think its just constantly feeding until i crashes
     };
 
     return (

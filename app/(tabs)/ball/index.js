@@ -19,13 +19,13 @@ export default function BallScreen() {
 
 
     // Listen for app state changes
-    useEffect(() => {
-        console.log('when does this happen')
-        const subscription = AppState.addEventListener('change', nextAppState => {
-            setRunning(nextAppState === 'active');
-        });
-        return () => subscription.remove();
-    }, []);
+    // useEffect(() => {
+    //     console.log('when does this happen')
+    //     const subscription = AppState.addEventListener('change', nextAppState => {
+    //         setRunning(nextAppState === 'active');
+    //     });
+    //     return () => subscription.remove();
+    // }, []);
 
 
 
@@ -34,7 +34,7 @@ export default function BallScreen() {
     const [world] = useState(() => engine.world);
 
     // Apply context-based gravity
-    world.gravityvalue = gravity;
+    world.gravity.y = gravity;
 
 
     // Create ball state locally
@@ -104,13 +104,13 @@ export default function BallScreen() {
         ball: {
             body: ball,
             size: [ballSize, ballSize],
-            color: 'green',
+            color: '#E64A19',
             renderer: Circle
         },
         floor: {
             body: floor,
             size: [SCREEN_WIDTH, floorHeight],
-            color: 'brown',
+            color: 'dark pink',
             renderer: Rectangle
         },
         leftWall: {
@@ -242,7 +242,7 @@ function TouchSystem(entities, { touches }, offsetY) {
 
 const styles = StyleSheet.create({
     container: { flex: 1 },
-    gameContainer: { flex: 1, backgroundColor: '#fff' },
+    gameContainer: { flex: 1, backgroundColor: '#FFAB91' },
 });
 
 

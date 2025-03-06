@@ -30,7 +30,7 @@ export default function TabLayout() {
                 <Tabs.Screen
                     name="mood"
                     options={{
-                        title: 'Mood',
+                        title: 'Mood Tracker',
                         headerShown: false,
                         tabBarIcon: ({ color, focused }) => (
                             <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
@@ -40,7 +40,7 @@ export default function TabLayout() {
                 <Tabs.Screen
                     name="ball"
                     options={{
-                        title: 'Ball',
+                        title: 'Ball Bouncer',
                         headerShown: false,
                         tabBarIcon: ({ color, focused }) => (
                             <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
@@ -50,7 +50,7 @@ export default function TabLayout() {
                 <Tabs.Screen
                     name="about"
                     options={{
-                        title: 'About',
+                        title: 'Resources',
                         headerShown: false,
                         tabBarIcon: ({ color, focused }) => (
                             <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
