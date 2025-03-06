@@ -12,10 +12,12 @@ import {
 import { Link } from 'expo-router';
 import MoodBarChart from './MoodBarChart';
 import LastWeekMoods from './LastWeekMoods'; // ✅ Import the new component
-// import DatePickerField from './DatePickerField';
+import DatePickerField from './DatePickerField';
+
 
 export default function Index() {
   // Define Mood Arrays
+
   const firstRowMoods = ['Sad', 'Neutral', 'Happy', 'Very Sad', 'Very Happy'];
   const secondRowMoods = ['Angry', 'Excited'];
   // State to manage:
@@ -32,15 +34,35 @@ export default function Index() {
     'Angry': require('./assets/angry.png'),
     'Excited': require('./assets/excited.png'),
   };
+  const handleSave = () => {
+    const currentDate = date.toLocaleDateString('en-CA'); // ✅ Always uses local time
+const newEntry = { date: currentDate, mood: selectedMood, note };
 
+    // Check if there's already an entry
+    const existingEntryIndex = entries.findIndex((entry) => entry.date === currentDate);
+
+    if (existingEntryIndex !== -1) {
+        // Replace the old entry with new data
+        const updatedEntries = [...entries];
+        updatedEntries[existingEntryIndex] = newEntry;
+        setEntries(updatedEntries);
+    } else {
+        // Otherwise add a new entry
+        setEntries([...entries, newEntry]);
+    }
+};
   return (
     <ScrollView style={styles.scrollContainer}>
       <View style={styles.container}>
+        <Text style={styles.title}>Mood Tracker Chart</Text>
         <View style={styles.chartContainer}>
           <MoodBarChart entries={entries} />
         </View>
-
-
+        {/* --- DATE PICKER --- */}
+        <View style={styles.dateContainer}>
+          <DatePickerField date={date} onChangeDate={setDate} />
+        </View>
+<Text style={styles.title}>Select A Date, Face, And Feeling Of The Day.</Text>
 
         {/* --- MOOD ROW 1 --- */}
         <View style={styles.moodRow}>
@@ -233,4 +255,12 @@ const styles = StyleSheet.create({
     color: '#212121',
     fontSize: 16,
   },
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: 'black',
+    marginBottom: 10,
+    textAlign: 'center',
+    
+  }
 });
