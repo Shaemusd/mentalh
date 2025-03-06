@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
-
+import { Link } from 'expo-router';
 const { width, height } = Dimensions.get('window');
 
 export default function ImagePage() {
@@ -10,6 +10,9 @@ export default function ImagePage() {
         source={require('../mood/assets/bru.jpeg')} 
         style={styles.image} 
       />
+      {/* <Link href="/" style={styles.link}> For some reason this crashes the app zzzzzzzz
+        Dismiss Modal
+      </Link> */}
     </View>
   );
 }

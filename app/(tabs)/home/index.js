@@ -56,6 +56,6 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderRadius: 5,
     marginBottom: 15,
-    backgroundColor: '#FF7043', // Sunset Orange
+   backgroundColor: '#FF7043', // Sunset Orange
   },
 });
