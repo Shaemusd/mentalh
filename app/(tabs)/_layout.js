@@ -33,8 +33,8 @@ export default function TabLayout() {
                         title: 'Mood Tracker',
                         headerShown: false,
                         tabBarIcon: ({ color, focused }) => (
-                            <Ionicons name={focused ? 'home-sharp' : 'home-outline'} color={color} size={24} />
-                        ),
+                            <Ionicons name={focused ? 'happy-sharp' : 'happy-outline'} color={color} size={24} />),
+
                     }}
                 />
                 <Tabs.Screen
@@ -43,8 +43,8 @@ export default function TabLayout() {
                         title: 'Ball Bouncer',
                         headerShown: false,
                         tabBarIcon: ({ color, focused }) => (
-                            <Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} />
-                        ),
+                            <Ionicons name={focused ? 'football-sharp' : 'football-outline'} color={color} size={24} />
+),
                     }}
                 />
                 <Tabs.Screen

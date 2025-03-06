@@ -12,31 +12,12 @@ export default function CalmDownPage() {
 
 
       <View style={[styles.section, { height: containerHeight }]}>
-        <Text style={styles.header}>Breathing Exercises</Text>
+        <Text style={styles.header}>Insight and Self-Reflection</Text>
         <Text style={styles.paragraph}>
-          Take a few slow, deep breaths. Inhale through your nose for four counts,
-          hold for four counts, and exhale through your mouth for four counts.
+          Therapy offers a safe and confidential environment for individuals to explore their thoughts, emotions, and experiences. By engaging with a trained mental health professional, you gain insight into your personal patterns and behaviors, helping you develop strategies to manage stress, anxiety, or depression.
         </Text>
         <Text style={styles.paragraph}>
-          Focusing on your breath helps calm your mind and reduces tension in your body.
-        </Text>
-        {/* <Image
-          source={require('../mood/assets')}
-          style={styles.image}
-        /> */}
-      </View>
-
-
-
-      <View style={[styles.section, { height: containerHeight }]}>
-        <Text style={styles.header}>Count to Ten</Text>
-        <Text style={styles.paragraph}>
-          When you feel anger building, pause and slowly count to ten.
-          This brief moment can help you cool off before reacting.
-        </Text>
-        <Text style={styles.paragraph}>
-          Sometimes just taking a short mental break can prevent an outburst
-          and give you time to think more clearly.
+        Therapy also encourages self-reflection, allowing you to understand the root causes of challenges and fostering long-term emotional resilience.
         </Text>
         {/* <Image
           source={require('../mood/assets')}
@@ -47,14 +28,28 @@ export default function CalmDownPage() {
 
 
       <View style={[styles.section, { height: containerHeight }]}>
-        <Text style={styles.header}>Take a Break</Text>
+        <Text style={styles.header}>Developing Healthy Coping Mechanisms</Text>
         <Text style={styles.paragraph}>
-          If possible, remove yourself from the situation that's causing anger.
-          Go for a short walk, get some fresh air, or find a quiet space.
+        One of the major benefits of therapy is the development of healthier coping mechanisms. Whether you’re dealing with relationship issues, life transitions, or persistent negative thought patterns, a therapist can provide tailored tools to help you navigate difficulties more effectively.
         </Text>
         <Text style={styles.paragraph}>
-          Stepping away, even briefly, can help reset your emotions and
-          prevent escalation.
+        Over time, these techniques become part of your daily life, reducing the intensity and frequency of overwhelming emotions.
+        </Text>
+        {/* <Image
+          source={require('../mood/assets')}
+          style={styles.image}
+        /> */}
+      </View>
+
+
+
+      <View style={[styles.section, { height: containerHeight }]}>
+        <Text style={styles.header}>Enhancing Interpersonal Relationships</Text>
+        <Text style={styles.paragraph}>
+        Moreover, therapy can greatly enhance your interpersonal relationships. As you learn to communicate more clearly and set healthier boundaries, you’ll likely find improvements in how you relate to family, friends, and colleagues.
+        </Text>
+        <Text style={styles.paragraph}>
+        By working through underlying issues and improving self-awareness, therapy not only supports mental well-being but can also lead to a more balanced and fulfilling life overall.
         </Text>
         {/* <Image
           source={require('../mood/assets')}

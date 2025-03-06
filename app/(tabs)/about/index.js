@@ -12,7 +12,7 @@ export default function HomePage() {
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       {/* Anger Section */}
       <View style={[styles.section, { height: containerHeight }]}>
-        <Text style={styles.header}>Anger</Text>
+        <Text style={styles.header}>Anger Controlling You?</Text>
         <Text style={styles.paragraph}>Manage your anger and find healthy ways to express it.</Text>
         <Text style={styles.paragraph}>Discover techniques to cool down and reflect.</Text>
         <Image 
@@ -20,13 +20,13 @@ export default function HomePage() {
           style={styles.image} 
         />
         <Link href="/about/anger_info" style={styles.link}>
-          Go to Anger
+        Show More...
         </Link>
       </View>
       
       {/* Sad Section */}
       <View style={[styles.section, { height: containerHeight }]}>
-        <Text style={styles.header}>Sad</Text>
+        <Text style={styles.header}>Sad More Days Then Not?</Text>
         <Text style={styles.paragraph}>Learn to embrace your feelings and find support.</Text>
         <Text style={styles.paragraph}>Get tips to help lift your mood.</Text>
         <Image 
@@ -34,35 +34,35 @@ export default function HomePage() {
           style={styles.image} 
         />
         <Link href="/about/sad_info" style={styles.link}>
-          Go to Sad
+        Show More...
         </Link>
       </View>
       
       {/* Therapy Section */}
       <View style={[styles.section, { height: containerHeight }]}>
-        <Text style={styles.header}>Therapy</Text>
-        <Text style={styles.paragraph}>Find resources and guidance for professional help.</Text>
-        <Text style={styles.paragraph}>Access techniques for self-care and growth.</Text>
+        <Text style={styles.header}>Therapy?</Text>
+        <Text style={styles.paragraph}>If you've ever wondered about therapy or if its for you,</Text>
+        <Text style={styles.paragraph}>click here and see if any of this resonates with you.</Text>
         <Image 
           source={require('../mood/assets/happy.png')} 
           style={styles.image} 
         />
         <Link href="/about/therapy_info" style={styles.link}>
-          Go to Therapy
+          Show More...
         </Link>
       </View>
       
       {/* Prevent Section */}
       <View style={[styles.section, { height: containerHeight }]}>
-        <Text style={styles.header}>Prevent</Text>
+        <Text style={styles.header}>Overwhelmed By Emotion?</Text>
         <Text style={styles.paragraph}>Explore strategies to prevent negative patterns.</Text>
-        <Text style={styles.paragraph}>Plan ahead and keep your mood uplifted.</Text>
+        <Text style={styles.paragraph}>Know that when you get overwhelmed, that is ok and normal.</Text>
         <Image 
           source={require('../mood/assets/very_sad.png')} 
           style={styles.image} 
         />
         <Link href="/about/prevent" style={styles.link}>
-          Go to Prevent
+        Show More...
         </Link>
       </View>
     </ScrollView>
