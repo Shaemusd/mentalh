@@ -36,21 +36,21 @@ export default function Index() {
   };
   const handleSave = () => {
     const currentDate = date.toLocaleDateString('en-CA'); // ✅ Always uses local time
-const newEntry = { date: currentDate, mood: selectedMood, note };
+    const newEntry = { date: currentDate, mood: selectedMood, note };
 
     // Check if there's already an entry
     const existingEntryIndex = entries.findIndex((entry) => entry.date === currentDate);
 
     if (existingEntryIndex !== -1) {
-        // Replace the old entry with new data
-        const updatedEntries = [...entries];
-        updatedEntries[existingEntryIndex] = newEntry;
-        setEntries(updatedEntries);
+      // Replace the old entry with new data
+      const updatedEntries = [...entries];
+      updatedEntries[existingEntryIndex] = newEntry;
+      setEntries(updatedEntries);
     } else {
-        // Otherwise add a new entry
-        setEntries([...entries, newEntry]);
+      // Otherwise add a new entry
+      setEntries([...entries, newEntry]);
     }
-};
+  };
   return (
     <ScrollView style={styles.scrollContainer}>
       <View style={styles.container}>
@@ -58,11 +58,24 @@ const newEntry = { date: currentDate, mood: selectedMood, note };
         <View style={styles.chartContainer}>
           <MoodBarChart entries={entries} />
         </View>
+
         {/* --- DATE PICKER --- */}
+
+
+
+        <View style={styles.container_mood}>
+        <Link href="/mood/details" style={styles.button}>
+          How To Track You Mood!
+        </Link>
+        </View>
+
+
+
+        <Text style={styles.title}>Select A Date, Face, And Feeling Of The Day.</Text>
         <View style={styles.dateContainer}>
           <DatePickerField date={date} onChangeDate={setDate} />
         </View>
-<Text style={styles.title}>Select A Date, Face, And Feeling Of The Day.</Text>
+
 
         {/* --- MOOD ROW 1 --- */}
         <View style={styles.moodRow}>
@@ -261,6 +274,26 @@ const styles = StyleSheet.create({
     color: 'black',
     marginBottom: 10,
     textAlign: 'center',
-    
-  }
+
+  },
+  button: {
+
+    fontSize: 20,
+    textDecorationLine: '#FF7043',
+    color: 'black',
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#F5F5DC',
+    borderRadius: 5,
+    marginBottom: 15,
+    backgroundColor: '#FF7043',
+    textDecorationLine: 'underline',
+  },
+
+  container_mood: {
+    flex: 1,
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    color:     '#F5F5DC',
+  },
 });

@@ -12,7 +12,7 @@ export default function DetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
+    backgroundColor: '#FF7043',
     justifyContent: 'center',
     alignItems: 'center',
   },
