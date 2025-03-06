@@ -1,10 +1,15 @@
-import { Text, View, StyleSheet } from 'react-native';
+import React from 'react';
+import { View, Image, StyleSheet, Dimensions } from 'react-native';
 
-export default function DetailsScreen() {
+const { width, height } = Dimensions.get('window');
 
+export default function ImagePage() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Details screen</Text>
+      <Image 
+        source={require('../mood/assets/bru.jpeg')} 
+        style={styles.image} 
+      />
     </View>
   );
 }
@@ -12,11 +17,13 @@ export default function DetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
-    justifyContent: 'center',
+    backgroundColor: '#FFE0CC', // soft, warm background
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  text: {
-    color: '#fff',
+  image: {
+    width: width * 0.8, 
+    height: height * 0.5,
+    resizeMode: 'contain',
   },
 });

@@ -4,17 +4,18 @@ import { Link } from 'expo-router';
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to MoodLift</Text>
+      <Text style={styles.title}>Welcome to Moodel</Text>
       <Text style={styles.subtitle}>
-        Your personal companion for daily mood improvement
+        Your personal companion for daily mood improvement.
       </Text>
       {/* Optional: Display an image if you have one */}
       <Image source={require('../mood/assets/excited.png')} style={styles.image} />
+      
       <Link href="/home/details" style={styles.button}>
-        Go to Details screen
+        Instant Mood BOOST?
       </Link>
       <Link href="/bonus" style={styles.button}>
-        Open Modal
+        Secret Button?
       </Link>
     </View>
   );
@@ -55,5 +56,6 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderRadius: 5,
     marginBottom: 15,
+    backgroundColor: '#FF7043', // Sunset Orange
   },
 });
